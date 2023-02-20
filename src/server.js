@@ -12,7 +12,7 @@ const config = require('./config');
 const wss = new WebSocket.Server({
   noServer: true, // we setup the server on our own
   clientTracking: false, // we do our own tracking
-  maxPayload: 1024 * 1024, // 1 MB should be plenty
+  maxPayload: 1024 * 10240000, // 1 MB should be plenty
   perMessageDeflate: config.perMessageDeflate,
 });
 
